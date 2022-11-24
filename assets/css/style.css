@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --mainColor: #4d07ff;
+    --darkColor: #0d0d0d;
+    --whiteColor: #fff;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+
+    background: url('https://wallpaperaccess.com/full/39632.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+ul,ol,li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.sidebar{
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 5rem;
+    backdrop-filter: blur(4px);
+    border-right: 1px solid rgb(32, 32, 32);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4rem;
+    transition: width 350ms ease-out;
+}
+
+.sidebar-logo{
+    width: 100%;
+    height: 9rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    transition: width 350ms ease-in-out;
+}
+
+.sidebar-logo img{
+    width: 5rem;
+    height: auto;
+}
+
+
+.sidebar-logo .logo-text{
+    color: var(--whiteColor);
+    font-variant: small-caps;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    display: none;
+    transition: all 350ms ease;
+}
+
+nav{
+    width: 100%;
+    
+}
+
+.nav-items{
+    width: 100%;
+}
+
+.nav-link{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 4rem;
+    margin-bottom: 1rem;
+    margin-inline: 0.5rem;
+    border-radius: 5px;
+    padding-inline: 1.2rem;
+    transition: background 350ms ease;
+}
+
+.nav-link.active {
+    background: var(--mainColor) !important;
+    color: white !important;
+}
+
+.nav-link .nav-link-icon{
+    color: var(--whiteColor);
+    font-size: 1.5rem;
+}
+
+.nav-link .nav-link-text{
+    display: none;
+    color: white;
+    letter-spacing: 0.3rem;
+    margin-left: 2rem;
+}
+
+.navbar-2{
+    margin-top: auto;
+
+}
+
+.sidebar:hover{
+    width: 20rem;
+}
+
+.sidebar:hover .sidebar-logo .logo-text{
+    display: block;
+}
+
+.sidebar:hover .sidebar-logo img{
+    margin-top: 2rem;
+    width: 8rem;
+}
+
+.sidebar:hover .nav-link .nav-link-text{
+    display: block;
+}
+
+.nav-link:hover{
+    background: rgba(128, 128, 128, 0.129);
+}
